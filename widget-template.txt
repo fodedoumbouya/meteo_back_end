@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html, body{
+                height: 100%
+            }
+            .parent > * {
+                margin: 0 auto;
+            }
+            .parent {
+                width: 100%; 
+                height: 80vh
+            }
+            .child {
+                width: 50%; 
+                height:45%; 
+                border: 5px solid green; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child">
+                <div  class="allmeteo-widget" data-ws="2161019"></div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="https://weather.allmeteo.com/widget/allmeteo.widget.js">  </script>
+</html>
