@@ -9,7 +9,7 @@ import (
 
 func Handler() {
 	http.HandleFunc("/station", api.GetStation)
-	//http.HandleFunc("/v", testHtml)
+	http.HandleFunc("/widget", api.GetWidget)
 
 	fmt.Println("server running 8085")
 	err := http.ListenAndServe(":8085", nil)
