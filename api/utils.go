@@ -49,24 +49,30 @@ func getAllStationData() ([]models.Station, bool) {
 func getHtml(id string) string {
 	html := fmt.Sprintf(
 		`
-	<!DOCTYPE html>
-<html>
+	<html>
     <head>
         <style>
             html, body{
-                height: 100%v
+                height: 100%v;
+                 font-size: 50px;
             }
             .parent > * {
                 margin: 0 auto;
+                 font-size: 50px;
+
             }
             .parent {
                 width: 100%v; 
-                height: 80vh
+                height: 100%v;
+                font-size: 60px;
             }
             .child {
-                width: 50%v; 
-                height:45%v; 
-                border: 5px solid green; 
+                width: 800px; 
+                height:1000px; 
+                 font-size: 60px;
+                color: red;
+
+                
             }
         </style>
     </head>
@@ -79,7 +85,8 @@ func getHtml(id string) string {
     </body>
     <script type="text/javascript" src="https://weather.allmeteo.com/widget/allmeteo.widget.js">  </script>
 </html>
-`, "%", "%", "%", "%", id,
+
+	`, "%", "%", "%", id,
 	)
 
 	return html

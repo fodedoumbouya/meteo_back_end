@@ -29,14 +29,18 @@ func GetStation(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(resp)
 }
 
-// /getImage/id/{id}
+// /widget?id
 func GetWidget(w http.ResponseWriter, r *http.Request) {
 	//id, ok := r.URL.Query()["id"]
 
 	id := r.URL.Query().Get("id")
-	html := r.URL.Host
+	html := "This request need id"
+	//r.URL.Host
+	if len(id) > 0 {
+		html = getHtml(id)
+
+	}
 	//"error"
-	html = getHtml(id)
 	fmt.Println(html)
 
 	fmt.Fprintf(w, html)
