@@ -53,7 +53,6 @@ func scrapper() {
 
 func main() {
 	Handler()
-
 }
 
 //
