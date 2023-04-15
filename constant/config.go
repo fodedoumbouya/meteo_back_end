@@ -6,7 +6,7 @@ import (
 
 var Mysql = models.Connection{
 	Host:     "localhost:3306", //              //"8.134.122.202" //"8.208.76.170" // "localhost", //
-	Password: "130231322",      // "pass123",        //"1302313",  //"root",      //, "root",      //
+	Password: "",               // "pass123",        //"1302313",  //"root",      //, "root",      //
 	DbName:   DBName,
 }
 

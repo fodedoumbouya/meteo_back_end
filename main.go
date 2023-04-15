@@ -1,22 +1,18 @@
 package main
 
 import (
-	"encoding/csv"
 	"fmt"
 	"meteo_back_end/api"
+	"meteo_back_end/data"
 	"net/http"
 
 	_ "github.com/go-sql-driver/mysql"
-
-	"log"
-	"os"
-
-	"github.com/gocolly/colly"
 )
 
 func Handler() {
 	http.HandleFunc("/station", api.GetStation)
 	http.HandleFunc("/widget", api.GetWidget)
+	http.HandleFunc("/temp", data.GetDataURL)
 
 	fmt.Println("server running 8085")
 	err := http.ListenAndServe(":8085", nil)
@@ -25,35 +21,8 @@ func Handler() {
 	}
 }
 
-func scrapper() {
-	fName := "data.csv"
-	file, err := os.Create(fName)
-	if err != nil {
-		log.Fatalf("Could not create file, err: %q", err)
-		return
-	}
-	defer file.Close()
-
-	writer := csv.NewWriter(file)
-	defer writer.Flush()
-
-	c := colly.NewCollector()
-	c.OnHTML("table#customers", func(e *colly.HTMLElement) {
-		e.ForEach("tr", func(_ int, el *colly.HTMLElement) {
-			writer.Write([]string{
-				el.ChildText("td:nth-child(1)"),
-				el.ChildText("td:nth-child(2)"),
-				el.ChildText("td:nth-child(3)"),
-			})
-		})
-		fmt.Println("Scrapping Complete")
-	})
-	c.Visit("https://www.w3schools.com/html/html_tables.asp")
-}
-
 func main() {
 	Handler()
-
 }
 
 //

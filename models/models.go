@@ -9,6 +9,10 @@ type Station struct {
 	Lat          float64 `json:"lat"`
 	Log          float64 `json:"log"`
 }
+type Temperature struct {
+	Temperature string `josn:"temperature"`
+	Humidity    string `josn:"humidity"`
+}
 
 type Connection struct {
 	Host     string
