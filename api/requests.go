@@ -41,7 +41,7 @@ func GetWidget(w http.ResponseWriter, r *http.Request) {
 
 	}
 	//"error"
-	fmt.Println(html)
+	// fmt.Println(html)
 
 	fmt.Fprintf(w, html)
 

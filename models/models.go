@@ -13,6 +13,9 @@ type Temperature struct {
 	Temperature string `josn:"temperature"`
 	Humidity    string `josn:"humidity"`
 }
+type WeatherType struct {
+	Type string `josn:"type"`
+}
 
 type Connection struct {
 	Host     string
