@@ -6,6 +6,7 @@ require (
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/chromedp/chromedp v0.9.1
 	github.com/go-sql-driver/mysql v1.7.0
+	github.com/gocolly/colly v1.2.0
 )
 
 require (
@@ -14,7 +15,6 @@ require (
 	github.com/antchfx/xmlquery v1.3.15 // indirect
 	github.com/antchfx/xpath v1.2.3 // indirect
 	github.com/chromedp/cdproto v0.0.0-20230319112347-6603f2c23d36 // indirect
-	github.com/chromedp/chromedp v0.9.1 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gobwas/httphead v0.1.0 // indirect

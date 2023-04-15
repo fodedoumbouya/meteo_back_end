@@ -10,9 +10,9 @@ import (
 )
 
 func Handler() {
-	http.HandleFunc("/station", api.GetStation)
-	http.HandleFunc("/widget", api.GetWidget)
-	http.HandleFunc("/temp", data.GetDataURL)
+	http.HandleFunc("/api/station", api.GetStation)
+	http.HandleFunc("/api/widget", api.GetWidget)
+	http.HandleFunc("/api/weather/measurements", data.GetDataURL)
 
 	fmt.Println("server running 8085")
 	err := http.ListenAndServe(":8085", nil)

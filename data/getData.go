@@ -42,7 +42,7 @@ func GetDataFromUrl(id string) models.Temperature {
 	// create context
 	ctx, cancel := chromedp.NewContext(context.Background())
 	defer cancel()
-	url := fmt.Sprintf("http://localhost:8085/widget?id=%v", id)
+	url := fmt.Sprintf("http://localhost:8085/api/widget?id=%v", id)
 	// navigate to URL
 	var html string
 	var example string
