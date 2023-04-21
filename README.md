@@ -1,15 +1,16 @@
 # meteo_back_end
-Backend de l'application de visualisation de données météorologiques
-Configuration de l'environnement
+# Backend de l'application de visualisation de données météorologiques
+# Configuration de l'environnement
 
-Avant de pouvoir utiliser le backend, vous devez vous assurer que votre environnement dispose des éléments suivants :
+Avant de pouvoir utiliser le backend, vous devez vous assurer que votre environnement dispose  des éléments suivants :
 
     Git : vous pouvez l'installer depuis le lien suivant : https://git-scm.com/downloads
     GoLang version go1.19.1 ou plus récente : vous pouvez l'installer depuis le lien suivant : https://golang.org/dl/
     Un serveur MySQL : vous pouvez utiliser WAMP Server qui contient MySQL. Si vous préférez installer MySQL directement, vous pouvez le télécharger depuis le lien suivant : https://dev.mysql.com/downloads/
 
 Vous aurez également besoin d'un éditeur de texte ou d'un IDE comme Visual Studio Code. Vous pouvez l'installer depuis le lien suivant : https://code.visualstudio.com/download
-Installation
+
+# Installation
 
 Voici les étapes à suivre pour installer et exécuter le backend :
 
