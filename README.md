@@ -23,4 +23,14 @@ Voici les étapes à suivre pour installer et exécuter le backend :
 
 N'oubliez pas de modifier les informations de connexion à la base de données dans le fichier config.go avant de lancer le serveur.
 
+# API Endpoints
+
+Voici les endpoints disponibles dans l'API de ce projet :
+
+    /api/station : retourne la liste de toutes les stations météorologiques sous forme d'un JSON contenant l'identifiant de chaque station, son numéro de série, son emplacement, son modèle et ses coordonnées géographiques (latitude et longitude).
+
+    /api/widget?id=id_widget : retourne le code HTML d'un widget pour afficher les données météorologiques d'une station spécifiée par son identifiant.
+
+    /api/weather/measurements?id=id_widget : retourne le temps qu'il fait dans la station spécifiée par son identifiant sous forme d'un JSON contenant un message de succès, un code de statut et une chaîne de caractères décrivant les conditions météorologiques actuelles (par exemple "ensoleillé", "pluvieux", "orageux", etc.).
+
 Bonne utilisation !
